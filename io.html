@@ -1,0 +1,51 @@
+<body>
+    IO - input &amp; output
+    <br><br>
+    What is your name? <input id="username">
+    <button id="run" onclick="greet()">Run</button>
+    <br>
+    <p id="greeting"></p>
+    <label><input id="small" type="radio" name="size" value="small">Small</label>
+    <label><input id="medium" type="radio" name="size" value="medium">Medium</label>
+    <label><input id="large" type="radio" name="size" value="large">Large</label>
+    <br><br>
+    <label><input id="red" type="radio" name="color" value="red">Red</label>
+    <label><input id="green" type="radio" name="color" value="green">Green</label>
+    <label><input id="blue" type="radio" name="color" value="blue">Blue</label>
+    <button onclick="buy()">Buy</button>
+    <p id="price"></p>
+
+
+</body>
+
+<script>
+    function greet() {
+        let inputText = username.value;
+        let outputText = "Hello " + inputText + ".";
+        greeting.innerText = outputText;
+    }
+
+    function buy() {
+        let size = "1";
+        let color = " black";
+        let textcolor = " white"
+        if (small.checked) {
+            size = "10"
+        } else if (medium.checked) {
+            size = "20"
+        } else if (large.checked) {
+            size = "30"
+        }
+
+        if (red.checked) {
+            color = " red"
+        } else if (green.checked) {
+            color = " green"
+        } else if (blue.checked) {
+            color = " blue"
+        }
+        price.innerText = size + color;
+        price.style.color = textcolor;
+        price.style.backgroundColor = color;
+        price.style.height = size + "rem";    }
+</script>
