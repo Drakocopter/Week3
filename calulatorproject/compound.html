@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <script src="calc2.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="./">Home</a>
+        <a href="./mortgage.html">Mortage Calculator</a>
+        <a href="./compound.html">Compound Interest Calculator</a>
+    </nav>
+    <div class="Compound Calculator">
+        <div class="Calculator">
+            <label for="depositAmount">Despoit Amount:</label> <input id="depositAmountInput" type="number">
+            <label for="percentageRate">Interest Rate:</label><input id="percentageRateInput" type="number">
+            <label for="numberOfMonths">Years:<input id="monthsInput" type="number"></label>
+            <button id="calc">Calculate</button>
+            <hr>
+            Future Value: <input id="valueElement" type="number" readonly>
+            Total Interest: <input id="totalElement" type="number" readonly>
+        </div>
+    </div>
+</body>
+<script>
+    function doCalc() {
+        const depositAmount = Number(depositAmountInput.value);
+        const percentageRate = Number(percentageRateInput.value);
+        const months = Number(monthsInput.value);
+
+        const result = getValue(depositAmount, percentageRate, months);
+        valueElement.value = result.toFixed(2);
+
+        const gainedInterest = result - depositAmount;
+        totalElement.value = gainedInterest.toFixed(2);
+
+    }
+    calc.onclick = doCalc;
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <script src="./calc.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="./home.html">Home</a>
+        <a href="./mortgage.html">Mortage Calculator</a>
+        <a href="./compound.html">Compound Interest Calculator</a>
+    </nav>
+    <div class="mortgageform">
+        <div class="Calculator">
+            <label for="loanAmount">Loan Amount:</label> <input id="loanAmountInput" type="number">
+            <label for="percentageRate">Interest Rate:</label><input id="percentageRateInput" type="number">
+            <label for="numberOfMonths">Years:<input id="monthsInput" type="number"></label>
+            <button id="calc">Calculate</button>
+            <hr>
+           Monthly Payment <input id="outputElement" type="number" readonly>
+           Interest Paid <input id="totalElement" type="number" readonly>
+           Total Paid <input id="paidElement" type="number" readonly>
+        </div>
+    </div>
+</body>
+<script>
+    function doCalc() {
+        const loanAmount = Number(loanAmountInput.value);
+        const percentageRate = Number(percentageRateInput.value) /100;
+        const months = Number(monthsInput.value) * 12;
+
+        const result = getPayment(loanAmount, percentageRate, months);
+        outputElement.value = result.toFixed(2);
+        
+        const totalPaid = result * months;
+        const interestPaid = totalPaid - loanAmount
+        totalElement.value = totalPaid.toFixed(2);
+        paidElement.value = interestPaid.toFixed(2);
+
+        
+    } 
+    calc.onclick = doCalc;
+</script>
+
+</html>
