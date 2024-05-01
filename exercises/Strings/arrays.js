@@ -8,3 +8,8 @@ let array = inputs.split(",");
 for (let i = 0; i < 4; i++) {
  console.log(array[i]);
 }
+
+//When emails do [YOUR NAME HERE] what happens?
+//What if you wanted it to stop after a certain amount of times.
+
+// exercises/Strings/answer.png

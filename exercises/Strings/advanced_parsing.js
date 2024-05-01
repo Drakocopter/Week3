@@ -16,11 +16,7 @@ function parseAndDisplayName(name) {
     }
     console.log("")
 }
-
-parseAndDisplayName("Cher");
-parseAndDisplayName("Brenda Kaye");
-parseAndDisplayName("Dana Lynn Wyatt");
-
-
-
+parseAndDisplayName("Beyoncé");
+parseAndDisplayName("Keanu Reeves");
+parseAndDisplayName("Joseph Gordon Levitt");
 // Do you need to give the space or symbol a name before splitting?
