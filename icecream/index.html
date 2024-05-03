@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./main.css" rel="stylesheet" type="text/css">
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <label>Number of Scoops:<input type="number" min="1" max="4" value="1" id="scoopsElement"></label>
+        <br>
+        <p>Both cup and cone start off at $2.25, plus $1.25 per scoop</p>
+        <div class="coneCupOptions">
+            <label><input type="radio" name="container" checked="false" id="coneElement">Cone</label>
+            <label><input type="radio" name="container" checked="true" id="cupElement">Cup</label>
+        </div> <!--END OF coneCupOptions-->
+        <div class="toppings" id="toppings">
+            <div class="title">Toppings</div>
+            <table>
+                <tr>
+                    <td><input type="checkbox" id="sprinklesElement">Sprinkles ($0.50)</td>
+                    <td><input type="checkbox" id="whippedElement">Whipped Cream ($0.25)</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="fudgeElement">Hot Fudge ($1.25)</td>
+                    <td><input type="checkbox" id="cherryElement">Cherry ($0.25)</td>
+                </tr>
+            </table>
+        </div>
+        <button id="submitOrder">Submit Order</button>
+        <table class="prices">
+            <tr>
+                <td>Subtotal:</td>
+                <td id="basePriceElement">$0.00</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td id="taxElement">$0.00</td>
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td id="totalElement">$0.00</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

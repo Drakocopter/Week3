@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+}
+
+.toppings>* {
+    text-align: left;
+}
+
+.toppings>* {
+    text-align: left;
+}
+
+.toppings {
+    width: fit-content;
+    display: inline-block;
+}
+
+.td {
+    text-align: right;
+}
+
+.toppings table {
+    border: 1px solid black;
+}
+button{
+    display: block;
+    margin: auto;
+    border-radius: 4rem;
+    padding: .5rem;
+}
+
+.prices{
+    margin: auto;
+}
+*{
+    opacity: 1;
+    transition: opacity ease-in-out .5s;
+}
+.hidden{
+    opacity: 0;
+    transition: opacity ease-in-out .5s;
+
+}
