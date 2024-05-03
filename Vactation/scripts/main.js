@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-
+    debugger
     navigationBar.innerHTML =`
     <a href="./index.html">Home</a>
     <a href="./activities.html">Acitivities</a>

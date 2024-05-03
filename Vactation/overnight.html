@@ -16,8 +16,45 @@
 
 <body>
     <nav id="navigationBar"></nav>
-    <header></header>
-    <section></section>
+    <section class="costEstimatorSection">
+        <fieldset class="costEstimator">
+            <legend>
+                <h1>Cost Estimator</h1>
+            </legend>
+            <div class="guestInfo">
+                <label for="guestName">Name:<br></label>
+                <input type="text" id="guestName">
+                <label for="guestEmail">Email:</label>
+                <input type="text" id="guestEmail">
+                <label for="checkInDate">Check-in Date:</label>
+                <input type="date" id="checkInDate">
+                <label for="nights">Number of Nights:</label>
+                <input type="number" id="nights" min="1" value="1">
+            </div>
+            <div class="roomTypes">
+                <div>Room Type:</div>
+                <label for="queen"><input type="radio" name="roomTypes" id="queen" value="queen" checked>Queen</label>
+                <label for="king"><input type="radio" name="roomTypes" id="king" value="king">King</label>
+                <label for="suite"><input type="radio" name="roomTypes" id="suite" value="suite">Suite</label>
+                <label for="adults">Number of Adults: </label>
+                <input type="number" id="adults" value="1" min="1">
+                <label for="children">Number of Children: </label>
+                <input type="number" id="children" value="0" min="0">
+            </div>
+            <div class="discountSection">
+                <label for="noDiscount"><input type="radio" name="roomTypes" id="noDiscount" checked>No Discount</label>
+                <label for="discountAAASenior"><input type="radio" name="roomTypes" id="discountAAASenior" >Senior Discount</label>
+                <label for="discountMilitary"><input type="radio" name="roomTypes" id="discountMilitary">Military Discount</label>
+            </div>
+
+            <br>
+            <button id="estimate">Estimate</button>
+            <div class="totals">
+                <pre id="output"></pre>
+            </div>
+
+        </fieldset>
+    </section>
     <footer>&copy;2024 Vacation Inc.</footer>
 </body>
 
