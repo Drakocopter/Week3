@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         Name: ${name}
         Email: ${email}
         Date:${checkInDate.toLocaleDateString()}
-        Is Peak Season: ${peakSeason}
+        Is Peak Season: <span class="title">${peakSeason}</span>
         Nights: ${numOfNights}
         Room: <span class="title">${room}</span>
         Adults: ${adults}
